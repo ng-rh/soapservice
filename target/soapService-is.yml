@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: List
+items:
+- apiVersion: image.openshift.io/v1
+  kind: ImageStream
+  metadata:
+    name: soapservice
+  spec:
+    tags:
+    - from:
+        kind: ImageStreamImage
+        name: soapservice@sha256:df73000fda38e448662c9e3abfed0e646fbc9b60319da0b913a884815636dbb8
+        namespace: fuse
+      name: latest
